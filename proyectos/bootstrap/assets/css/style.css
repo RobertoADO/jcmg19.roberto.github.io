@@ -1,0 +1,81 @@
+.bg_cuppon{
+background-color: #28A745 !important;
+
+}
+
+.bg_cuppon h6, .bg_cuppon label, .bg_cuppon .form-control::placeholder {
+    color: #fff !important;
+}
+
+.bg_cuppon .form-control {
+    background: #fff;
+    color: #212529;
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 0.7em;
+}
+
+.bg_cuppon .btn-light {
+    color: #212529;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+.card {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #F8F9FA;
+}
+
+.card-title {
+    font-weight: 300;
+    font-size: 20pt;
+    color: #212529;
+}
+
+.card-text, .card-location, .card-location i {
+    font-weight: 300;
+    color: #707070;
+}
+
+.card-location {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 13pt;
+    color: #707070;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.card-price-old {
+    color: #707070;
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-right: 0.5em;
+}
+
+.card-price-new {
+    color: #28a745;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 1px solid #F8F9FA;
+    padding-top: 0.7em;
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5em;
+}
+
+.card-text.mb-1 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16pt;
+    color: #707070;
+}

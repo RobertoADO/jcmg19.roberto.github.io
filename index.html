@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+
+
+        .contact a {
+            color: #6c757d;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .contact a:hover {
+            color: #495057;
+            text-decoration: underline;
+        }
+        
+        .contact p {
+            color: #6c757d;
+            font-size: 0.95rem;
+        }
+        
+        .contact i {
+            margin-right: 8px;
+            color: #495057;
+        }
+        
+        .section-title {
+            color: #343a40;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .card {
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .card-body {
+            color: #495057;
+            line-height: 1.6;
+        }
+        
+        /* Estilos para las flechas del carrusel */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 50%;
+            padding: 10px;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 5%;
+        }
+        
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+        }
+        
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+        }
+        
+        /* Estilos para reducir el tamaño de texto en las tarjetas del carrusel */
+        .carousel .card-title {
+            font-size: 1rem !important;
+            font-weight: 600;
+        }
+        
+        .carousel .card-text {
+            font-size: 0.8rem !important;
+            line-height: 1.3;
+        }
+        
+        .carousel .badge {
+            font-size: 0.7rem !important;
+        }
+        
+        /* Estilos adicionales para mejorar el ajuste del contenido */
+        .carousel .card-body {
+            padding: 0.75rem !important;
+        }
+        
+        .carousel .card-footer {
+            padding: 0.5rem 0.75rem !important;
+        }
+        
+        .carousel .btn-sm {
+            font-size: 0.75rem !important;
+            padding: 0.25rem 0.5rem !important;
+        }
+        
+        .carousel .mb-2 {
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .carousel .my-2 {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        /* Control del tamaño de las imágenes en el carrusel */
+        .carousel .card-img-top {
+            height: 150px !important;
+            object-fit: cover !important;
+            object-position: center !important;
+        }
+        
+        /* Asegurar que el contenido de texto tenga espacio suficiente */
+        .carousel .card {
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        .carousel .card-body {
+            flex: 1 !important;
+            display: flex !important;
+            flex-direction: column !important;
+        }
+        
+        .carousel .card-text {
+            flex: 1 !important;
+            overflow: hidden !important;
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <title>Curriculum Vitae</title>
+</head>
+<body>
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resumen">Resumen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Formación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Habilidades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications">Capacitaciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portafolio</a>
+                    </li>
+                  
+                </ul>
+            </div>
+        </div>
+        </nav>
+
+    <!-- Banner de presentación -->
+    <section class="py-5 bg-light" style="padding-top: 120px !important;">
+        <div class="container">
+            <div class="text-start">
+                <h1 class="display-5 fw-bold text-dark mb-3">Juan Carlos Marín González</h1>
+                <p class="lead text-muted mb-0">Ingeniero en Informática | Especialista en Power BI & Python para análisis de datos | ETL · Dashboards · KPIs · Business Intelligence</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container my-5">
+
+            <section id="contact" class="info border-top border-bottom py-3 mb-4">
+      <div
+        class="contact d-flex flex-column flex-md-row justify-content-center gap-3 text-center container-fluid px-3 px-lg-5"
+      >
+        <p class="flex-fill"><i class="fas fa-phone"></i> +569 99351577</p>
+        <p class="flex-fill">
+          <i class="fas fa-envelope"></i> jcmg19@gmail.com
+        </p>
+                 <p class="flex-fill">
+           <i class="fas fa-map-marker-alt"></i>
+           Eduardo Castilo Velasco 2958, Santiago , Chile
+         </p>
+         <p class="flex-fill">
+           <i class="fab fa-linkedin"></i>
+           <a href="http://www.linkedin.com/in/juan-carlos-maring" target="_blank">Perfil LinkedIn</a>
+         </p>
+      </div>
+    </section>
+
+        <section id="resumen" class="mb-5">
+            <h2 class="section-title">Resumen Profesional</h2>
+            <div class="card">
+                <div class="card-body">
+                    <p class="mb-0">
+                        Profesional especializado en Análisis de Datos con experiencia en el desarrollo y mantenimiento de sistemas, aplicaciones, procesos ETL y procedimientos almacenados (SP). 
+                Amplia experiencia en la gestión de bases de datos PostgreSQL, Oracle, MySQL y SQL Server. Dominio en el análisis de datos mediante Power BI y programación en Python para 
+                la manipulación y análisis de grandes volúmenes de datos. Conocimientos fundamentales en el lenguaje R y en el uso de herramientas en la nube como GCP, BigQuery y Looker Studio 
+                para la optimización de procesos de análisis y la visualización de datos. Experiencia en el diseño y desarrollo de dashboards, paneles interactivos y modelos de datos escalables.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+                <div class="row">
+            <div class="col-md-6">
+                <section id="experience" class="mb-5">
+                    <h2 class="section-title">Experiencia</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="experience-item mb-5">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">IT Analyst</h5>
+                                    <span class="badge bg-secondary">2021 - Actualidad</span>
+                                </div>
+                                <p class="text-muted mb-1">Falabella Tecnología Corporativa</p>
+                                <p class="mb-0">Análisis de datos para soporte funcional de tiendas en Chile, Perú y Colombia. Manejo de SQL Developer, JIRA, procesos ETL, y reportes interactivos en Power BI.</p>
+                            </div>
+                            
+                            <div class="experience-item mb-5">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Analista de Datos</h5>
+                                    <span class="badge bg-secondary">2018 - 2021</span>
+                                </div>
+                                <p class="text-muted mb-1">Grupo Monel</p>
+                                <p class="mb-0">Diseño y desarrollo de procesos ETL, dashboards en Power BI y análisis de grandes volúmenes de datos en Python.</p>
+                            </div>
+                            
+                            <div class="experience-item mb-5">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Analista de Sistemas</h5>
+                                    <span class="badge bg-secondary">2010 - 2018</span>
+                                </div>
+                                <p class="text-muted mb-1">Ministerio de Relaciones Exteriores</p>
+                                <p class="mb-0">Desarrollo de módulos administrativos y financieros, optimización de procesos con ETL y desarrollo de dashboards con Power BI.</p>
+                            </div>
+                            
+                            <div class="experience-item">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Coordinador de Informática</h5>
+                                    <span class="badge bg-secondary">2005 - 2010</span>
+                                </div>
+                                <p class="text-muted mb-1">Instituto de Altos Estudios Diplomáticos Pedro Gual</p>
+                                <p class="mb-0">Automatización de procesos, gestión de proyectos y adaptación de software Open Source para educación a distancia.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section id="education" class="mb-5">
+                    <h2 class="section-title">Formación Académica</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="education-item mb-4">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Diplomado Big Data & Business Intelligence</h5>
+                                    <span class="badge bg-secondary">2025</span>
+                                </div>
+                                <p class="text-muted mb-0">Universidad Andrés Bello</p>
+                            </div>
+                            
+                            <div class="education-item">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="mb-0">Ingeniero en Informática</h5>
+                                    <span class="badge bg-secondary">2008</span>
+                                </div>
+                                <p class="text-muted mb-0">Universidad Alejandro de Humboldt</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="skills" class="mb-5">
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="mb-3">Herramientas</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-database me-2"></i>PostgreSQL</li>
+                                        <li class="mb-2"><i class="fas fa-database me-2"></i>Oracle</li>
+                                        <li class="mb-2"><i class="fas fa-database me-2"></i>MySQL</li>
+                                        <li class="mb-2"><i class="fas fa-database me-2"></i>SQL Server</li>
+                                        <li class="mb-2"><i class="fas fa-chart-bar me-2"></i>Power BI</li>
+                                        <li class="mb-2"><i class="fas fa-chart-line me-2"></i>Tableau</li>
+                                        <li class="mb-2"><i class="fas fa-chart-pie me-2"></i>Looker Studio</li>
+                                        <li class="mb-2"><i class="fas fa-cloud me-2"></i>BigQuery</li>
+                                        <li class="mb-2"><i class="fas fa-cloud me-2"></i>GCP</li>
+                                        <li class="mb-2"><i class="fas fa-code me-2"></i>SQL Developer</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fab fa-python me-2"></i>Python</li>
+                                        <li class="mb-2"><i class="fas fa-code me-2"></i>R</li>
+                                        <li class="mb-2"><i class="mb-2"><i class="fas fa-exchange-alt me-2"></i>ETL</li>
+                                        <li class="mb-2"><i class="fas fa-tools me-2"></i>Remedy</li>
+                                        <li class="mb-2"><i class="fas fa-plug me-2"></i>SOAP</li>
+                                        <li class="mb-2"><i class="fas fa-code me-2"></i>Visual Studio Code</li>
+                                        <li class="mb-2"><i class="fas fa-cogs me-2"></i>Pentaho</li>
+                                        <li class="mb-2"><i class="fas fa-table me-2"></i>Excel</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <!-- Sección de Capacitaciones ocupando todo el ancho -->
+        <section id="certifications" class="mb-5" style="margin-top: -20px;">
+            <h2 class="section-title">Capacitaciones</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Data Analyst con Python</h6>
+                                    <span class="badge bg-secondary">258 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Desafío Latam</p>
+                            </div>
+                            
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Visualización y comunicación de Insights</h6>
+                                    <span class="badge bg-secondary">46 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Desafío Latam</p>
+                            </div>
+                            
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">SQL para el análisis de datos</h6>
+                                    <span class="badge bg-secondary">60 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Desafío Latam</p>
+                            </div>
+                            
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Programación con Python para el análisis de datos</h6>
+                                    <span class="badge bg-secondary">76 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Desafío Latam</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Administrador GNU/Linux</h6>
+                                    <span class="badge bg-secondary">80 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Centro Nacional de Tecnologías de Información</p>
+                            </div>
+                            
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Framework Laravel PHP</h6>
+                                    <span class="badge bg-secondary">120 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Online</p>
+                            </div>
+                            
+                            <div class="certification-item mb-3">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">PostgreSQL para DBA</h6>
+                                    <span class="badge bg-secondary">40 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">CENTEC</p>
+                            </div>
+                            
+                            <div class="certification-item">
+                                <div class="d-flex justify-content-between align-items-start mb-1">
+                                    <h6 class="mb-0">Auditoría de Sistemas</h6>
+                                    <span class="badge bg-secondary">24 horas</span>
+                                </div>
+                                <p class="text-muted mb-0">Instituto de Altos Estudios Diplomáticos Pedro Gual</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Sección de Portafolio -->
+        <section id="portfolio" class="mb-5">
+            <h2 class="section-title">Portafolio</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div id="carouselExampleIndicators" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row m-3 justify-content-center">
+                                    <div class="card col-12 col-md-5 col-lg-5 p-0 mx-auto mb-4 rounded-2" style="max-width: 18rem; max-height: 400px;">
+                                        <img src="./assets/img/landing.png" class="card-img-top rounded-0" alt="Landing Page">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Introducción a CSS </h5>
+                                            <p class="card-text mb-1">Desafío 2 - Construyendo un landing page</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">HTML</span>
+                                                <span class="badge bg-light text-dark">Flexbox</span>
+                                            </div>
+                                            <hr class="my-2">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="./proyectos/Landing/Proyecto_landing/index.html" class="btn btn-outline-secondary btn-sm">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-12 col-md-5 col-lg-5 p-0 mx-auto mb-4 rounded-2" style="max-width: 18rem; max-height: 400px;">
+                                        <img src="./assets/img/cuppon.png" class="card-img-top rounded-0" alt="Bootstrap">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Bootstrap </h5>
+                                            <p class="card-text mb-1">Desafío 4 - Cuppon</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">Bootstrap</span>
+                                                <span class="badge bg-light text-dark">CSS</span>
+                                            </div>
+                                            <hr class="my-2">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="./proyectos/bootstrap/index.html" class="btn btn-outline-secondary btn-sm">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row m-3 justify-content-center">
+                                    <div class="card col-12 col-md-5 col-lg-5 p-0 mx-auto mb-4 rounded-2" style="max-width: 18rem; max-height: 400px;">
+                                        <img src="./assets/img/iguanas.png" class="card-img-top rounded-0" alt="Diseño Flex">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Alineando contenido con Flex </h5>
+                                            <p class="card-text mb-1">Desafío 3 - Iguana pageble y moderna.</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">Bootstrap</span>
+                                                <span class="badge bg-light text-dark">CSS</span>
+                                                <span class="badge bg-light text-dark">Flex</span>
+                                            </div>
+                                            <hr class="my-2">
+                                        </div>
+                                        <div class="card-footer">
+                                                                                         <a href="./proyectos/Iguana/index.html" class="btn btn-outline-secondary btn-sm">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                    <div class="card col-12 col-md-5 col-lg-5 p-0 mx-auto mb-4 rounded-2" style="max-width: 18rem; max-height: 400px;">
+                                        <img src="./assets/img/html_csv.png" class="card-img-top rounded-0" alt="GitHub">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Introducción a HTML </h5>
+                                            <p class="card-text mb-1">Desafio - Mi Curriculum Vitae en HTML</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary">Git</span>
+                                                <span class="badge bg-light text-dark">GitHub</span>
+                                            </div>
+                                            <hr class="my-2">
+                                        </div>
+                                        <div class="card-footer">
+                                            <a href="./proyectos/CV/index.html" class="btn btn-outline-secondary btn-sm">Ver Proyecto</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+                 </section>
+      </main>
+      
+      <!-- Pie de página -->
+      <footer class="bg-dark text-light py-4 mt-5">
+          <div class="container">
+              <div class="text-center">
+                  <p class="mb-0 fs-6">
+                      <strong>Proyecto Final</strong> - Academia Desafío Latam - Introducción al Desarrollo Web
+                  </p>
+                                     <p class="mb-0 text-light small">
+                       Participante: Juan C. Marín G.
+                   </p>
+              </div>
+          </div>
+      </footer>
+ </body>
+</html>

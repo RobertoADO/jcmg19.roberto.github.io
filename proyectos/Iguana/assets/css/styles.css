@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+   
+  }
+  
+#titulo_ini {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    left: 0px;
+    width: 1280px;
+    height: 73px;
+    
+
+}
+.header_foto{
+    width: 1280px;
+    margin: 0;
+    padding: 0;
+}
+.header_foto img {
+    display: block;
+    width: 100%;
+}
+.header_foto,
+.tercera_linea {
+  display: block;
+  overflow: hidden; 
+}
+
+#titulo_ini span {
+    position: absolute;
+    top: 7px;
+    left: 530px;
+    width: 221px;
+    height: 59px;
+    font-size: medium;
+    text-align: left;
+    font: normal normal 500 59px/59px Raleway, sans-serif;
+    font-size: 39px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    margin: 0;
+    padding: 0;
+  }
+  .tercera_linea {
+    margin: 0;
+    padding: 0;
+    top: auto;
+    background-color: black;
+    display: flex;
+    justify-content: center; 
+    width: 1280px;
+  }
+  
+  .contenedor-flex {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 109px;
+    width: 871px;
+    height: 348px;
+    background-color: black;
+    color: white;
+  }
+  
+  .texto-flex {
+    width: 475px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background-color: black;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .imagen-flex {
+    width: 399px;
+    height: 237px;
+    background: transparent url('../img/iguana-1.jpg') no-repeat center center;
+    background-size: cover;
+
+    opacity: 1;
+    background-color: black;
+  }
+  
+.caracteristicas {
+    width: 1280px;
+    height: 348px;
+    background: #1E1A13;
+    opacity: 0.98;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.caracteristicas h2 {
+    font-size: 40px; 
+    font-weight: 500;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.iconos-caracteristicas {
+    display: flex;
+    justify-content: space-around;
+    width: 800px; 
+    align-items: center;
+}
+
+.icono-item {
+    text-align: center;
+}
+
+.icono-item i {
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+.icono-item p {
+    font-size: 25px; 
+    font-weight: 300;
+}
+  
+.image-gallery {
+    width: 1280px;
+    height: 348px;
+    background: #000000;
+    opacity: 0.96;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.image-gallery img {
+    width: 316px;
+    height: 202px;
+}
+
+footer {
+    width: 1280px;
+    height: 102px;
+    background: #1E1A13;
+    opacity: 0.98;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    font: normal normal 300 20px/24px Raleway;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+  
+  
+  
